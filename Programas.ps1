@@ -2,7 +2,9 @@
 
 $anydesk = "C:\Users\Luis-TI\Desktop\LUIS\Repositorios\Install_Anydesk.ps1"
 $arremate = "C:\Users\Luis-TI\Desktop\LUIS\Repositorios\arremate.ps1"
-$krolikPath= "C:\Users\Luis-TI\Desktop\LUIS\Repositorios\Executaveis\Krolik.exe"
+$krolik = "C:\Users\Luis-TI\Desktop\LUIS\Repositorios\Executaveis\Krolik.exe"
+$Putty = "C:\Users\Luis-TI\Desktop\LUIS\PowerShell\Executaveis\Putty.msi"
+$CodecPack = "C:\Users\Luis-TI\Desktop\LUIS\PowerShell\Executaveis\Codec-Pack.exe"
 
 # FUNÇÃO PARA EXIBIR O MENU
 
@@ -15,7 +17,9 @@ function Show-Menu {
     Write-Host "1 - Anydesk"
     Write-Host "2 - Arremate"
     Write-Host "3 - Krolik"
-    Write-Host "4 - Sair"
+    Write-Host "4 - Putty"
+    Write-Host "5 - Codec Pack"
+    Write-Host "6 - Sair"
     Write-Host "============================="
 }
 
@@ -38,10 +42,19 @@ while ($true) {
             break
          }
         3 { 
-            Start-Process -FilePath $krolikPath -ArgumentList "/S" -Wait
+            Start-Process -FilePath $krolik -ArgumentList "/S" -Wait
             break
          }
         4 { 
+            #Start-Process -FilePath $Putty -ArgumentList "/S" -Wait
+            Start-Process msiexec.exe -ArgumentList "/i `"$Putty`" /norestart" -Wait -NoNewWindow
+            break
+         }
+        5 { 
+            Start-Process -FilePath $CodecPack -ArgumentList "/S" "/quiet" -Wait -NoNewWindow
+            break
+         }
+        6 { 
             Write-Host "Saindo ..."
             return 
             break
