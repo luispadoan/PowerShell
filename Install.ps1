@@ -23,7 +23,6 @@ Write-Host "********************************************************************
 
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 
-Exit-PSSession
 
 
 
