@@ -10,7 +10,7 @@ $programas = @(
     "Anydesk",
     "Java 8",
     "Adobe Acrobat Reader DC",
-    "Google Chrome",
+    "Google Chrome"
 
 )
 
