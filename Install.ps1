@@ -8,7 +8,10 @@ $programas = @(
     "7-Zip",
     "K-Lite Codec Pack Full",
     "Anydesk",
-    "Java 8"
+    "Java 8",
+    "Adobe Acrobat Reader DC",
+    "Google Chrome",
+
 )
 
 foreach ($programa in $programas){
@@ -17,7 +20,10 @@ foreach ($programa in $programas){
 }
 
 Write-Host "******************************************************************************************************************"
-Write-Output "Os programas $programas foram instalados no sistema com sucesso !!!"
+
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
+Exit-PSSession
 
 
 
