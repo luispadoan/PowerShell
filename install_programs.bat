@@ -20,7 +20,3 @@ Write-Host "********************************************************************
 Write-Output "Os programas $programas foram instalados no sistema com sucesso !!!"
 
 
-
-
-
-
